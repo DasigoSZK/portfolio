@@ -17,6 +17,7 @@
   /*Text*/
   --text-white: #fff;
   --text-gray: #999999;
+  --text-black: #000;
   --title-color: #f9d342;
   --font-hero: "Press Start 2P", "Roboto", "sans-serif";
   --font-text: "Roboto", "sans-serif";
@@ -96,9 +97,73 @@ img {
   height: auto;
 }
 
+a {
+  color: var(--text-white);
+  text-decoration: none;
+}
+
 
 /* **************************************   Components   ************************************** */
 
+/*  ---- Header ----  */
+
+.nav_bar {
+  background-color: var(--color-firstYellow);
+  color: var(--text-black);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  height: 6rem;
+  z-index: 999;
+}
+
+.panel {
+  background-color: var(--color-firstYellow);
+  color: var(--text-black);
+  height: 40vh;
+  position: fixed;
+  bottom: 6rem;
+  width: 100%;
+  z-index: 990;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  height: inherit;
+  width: 100%;
+  height: 100%;
+}
+
+.menu a {
+  color: var(--text-black);
+  font-size: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 25%;
+}
+
+.menu hr {
+  color: var(--text-black);
+  background-color: #000;
+  width: 80%;
+  border: 1px solid black;
+  margin-top: 10%;
+  margin-bottom: 0;
+  align-self: flex-end;
+}
+
+.menu-is-active {
+  transform: translateY(0);
+}
 
 
 /* **************************************   Utilities    ************************************** */
