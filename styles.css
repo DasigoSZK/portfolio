@@ -1,0 +1,146 @@
+/* **************************************Custom Properties************************************** */
+
+:root {
+
+  /*Colores*/
+  --color-firstYellow: #f9d342;
+  --color-secondPurple: #3b0771;
+  --color-thirdDarkgray: #292826;
+  --color-Black50: rgba(0, 0, 0, 0.6);
+  --color-white: #fff;
+  --color-technologies1: #501a8a;
+  --color-technologies2: #381261;
+  --color-technologies4: #6521ad;
+  --color-technologies3: #210b38;
+  --color-technologies5: #802adb;
+  --color-technologies6: #381261;
+  /*Text*/
+  --text-white: #fff;
+  --text-gray: #999999;
+  --title-color: #f9d342;
+  --font-hero: "Press Start 2P", "Roboto", "sans-serif";
+  --font-text: "Roboto", "sans-serif";
+  --font-text-special: "VT323", "Roboto", "sans-serif";
+  /*Extras*/
+  --max-width: 1200px;
+}
+
+/* **************************************      Reset     ************************************** */
+
+html {
+  box-sizing: border-box;
+  font-family: var(--font-text);
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  color: var(--text-white);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+h3 {
+  font-size: 3.25rem;
+}
+
+h4 {
+  font-size: 3rem;
+}
+
+h5 {
+  font-size: 2.5rem;
+}
+
+h6 {
+  font-size: 2rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* **************************************   Components   ************************************** */
+
+
+
+/* **************************************   Utilities    ************************************** */
+
+.border-white {
+  border: 2px solid #fff;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+.btn {
+  background-color: var(--color-secondPurple);
+  border-radius: 5px;
+  font-size: 300%;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-auto {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  max-width: var(--max-width);
+}
+
+.none {
+  display: none;
+}
+
+.outline {
+  outline: 1px solid red;
+}
+
+/* **************************************   Site Styles  ************************************** */
