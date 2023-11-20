@@ -24,6 +24,7 @@
   --font-text-special: "VT323", "Roboto", "sans-serif";
   /*Extras*/
   --max-width: 1200px;
+  --nav-size: 6rem;
 }
 
 /* **************************************      Reset     ************************************** */
@@ -117,7 +118,7 @@ a {
   position: fixed;
   width: 100%;
   bottom: 0px;
-  height: 6rem;
+  height: var(--nav-size);
   z-index: 999;
 }
 
@@ -145,10 +146,15 @@ a {
 
 .menu a {
   color: var(--text-black);
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
   margin-left: 25%;
+}
+
+.menu a img {
+  margin-bottom: -3%;
+  margin-right: 0.25rem;
 }
 
 .menu hr {
@@ -156,13 +162,27 @@ a {
   background-color: #000;
   width: 80%;
   border: 1px solid black;
-  margin-top: 10%;
+  margin-top: 5%;
   margin-bottom: 0;
   align-self: flex-end;
 }
 
 .menu-is-active {
   transform: translateY(0);
+}
+
+/* ---- Buttons ---- */
+
+.button {
+  background-color: var(--color-secondPurple);
+  color: var(--text-white);
+  padding: 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+  font-family: var(--font-text);
+  border: 0;
+  width: 70%;
+  font-size: 150%;
 }
 
 
@@ -209,3 +229,166 @@ a {
 }
 
 /* **************************************   Site Styles  ************************************** */
+
+
+/* -------- HOME -------- */
+
+.home {
+  background-image: url(assets/home/background-space.png);
+  background-position: center;
+  background-repeat: repeat-y;
+  background-size: cover;
+  padding: 1rem;
+}
+
+/*  ---- Hero ----  */
+
+.hero {
+  background-image: url(./assets/hero/heroBackground.gif);
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 85vh;
+}
+
+.hero_content {
+  position: relative;
+  height: inherit;
+  display: flex;
+  align-items: flex-end;
+}
+
+.hero .pane {
+  position: absolute;
+  background-color: var(--color-Black50);
+  width: 95%;
+  height: 180px;
+  bottom: 5%;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.pane_text h3 {
+  text-align: center;
+  font-family: var(--font-hero);
+  color: var(--color-firstYellow);
+  font-size: 1.10rem;
+  text-shadow: 4px 0px 0px black,
+    0px 4px 0px black,
+    -4px 0px 0px black,
+    0px -4px 0px black;
+}
+
+.pane_text h1 {
+  font-family: var(--font-hero);
+  text-align: center;
+  color: var(--color-firstYellow);
+  font-size: 1.45rem;
+  line-height: 200%;
+  width: 100%;
+  text-shadow: 4px 0px 0px black,
+    0px 4px 0px black,
+    -4px 0px 0px black,
+    0px -4px 0px black;
+}
+
+.pane_buttons {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.pane_buttons button {
+  width: 40%;
+  height: 35px;
+  font-weight: bold;
+  font-size: 120%;
+  border-radius: 5px;
+}
+
+.pane_buttons button:first-of-type {
+  background-color: rgba(0, 0, 0, 0.0);
+  border: 2px solid var(--color-firstYellow);
+  color: var(--color-firstYellow);
+}
+
+.pane_buttons button:first-of-type:active {
+  background-color: var(--color-firstYellow);
+  border: 2px solid var(--color-firstYellow);
+  color: var(--text-black);
+}
+
+.pane_buttons button:last-of-type {
+  background-color: var(--color-firstYellow);
+  border: 2px solid var(--color-firstYellow);
+  color: var(--text-black);
+}
+
+.pane_buttons button:last-of-type:active {
+  background-color: rgba(0, 0, 0, 0.0);
+  border: 2px solid var(--color-firstYellow);
+  color: var(--color-firstYellow);
+}
+
+/*  ---- Projects ----  */
+
+.home_projects {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projects_folders {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 10%;
+  width: 100%;
+  justify-items: center;
+  height: 25%;
+}
+
+.folder {
+  max-width: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.folder img {
+  width: 72px;
+}
+
+.folder h4 {
+  font-size: 1.25rem;
+  line-height: 130%;
+  text-align: center;
+  background-color: var(--color-secondPurple);
+  margin-top: 0.25rem;
+  width: 130%;
+}
+
+.projects_preview {
+  background-color: var(--color-thirdDarkgray);
+  border-radius: 5px;
+  padding: 1rem;
+  border: 2px solid white;
+  margin-top: 1rem;
+}
+
+.projects_preview p {
+  font-family: var(--font-text-special);
+  line-height: 120%;
+  font-size: 110%;
+}
+
+.home_projects button {
+  margin-top: 1rem;
+}
