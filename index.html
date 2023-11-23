@@ -137,7 +137,7 @@
               <label for="name">Name*:</label>
               <input pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" name="name"
                 title="'Name' only accepts letters and blank spaces" placeholder="&nbsp;David Miller" required
-                type="text" id="name">
+                type="text">
             </div>
 
 
@@ -145,33 +145,46 @@
             <div class="form_input">
               <label for="phone"> Phone*:</label>
               <input pattern="^[0-9\s]{1,15}$" name="phone" title="'Phone' only accepts numbers and blank spaces"
-                placeholder="&nbsp;3624 256356" required type="number" id="phone">
+                placeholder="&nbsp;3624 256356" required type="tel">
             </div>
 
 
             <!-- Email -->
             <div class="form_input">
               <label for="email"> Email*:</label>
-              <input pattern="^[a-z0-9]+[.a-z0-9]*@[a-z0-9\\-]+(\\.[a-z0-9\\-]+)*(\\.[a-z]{2,15})$" name="email"
-                title="Please use a valid email address" placeholder="&nbsp;DavidMiller@gmail.com" required type="email"
-                id="email">
+              <input pattern="^[a-z0-9]+[\.a-z0-9]*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" name="email"
+                title="Please use a valid email address" placeholder="&nbsp;DavidMiller@gmail.com" required
+                type="email">
             </div>
 
 
             <!-- Message -->
             <div class="form_textarea">
               <label for="message"> Message*:</label>
-              <textarea re name="message" title="'Message' is required"
-                placeholder="&nbsp;Hi, I'm reaching out to you to..." required id="message"></textarea>
+              <textarea required name="message" title="'Message' is required"
+                placeholder="&nbsp;Hi, I'm reaching out to you to..." required></textarea>
             </div>
 
 
           </div>
+        </form>
+
+        <!-- Contact Submit -->
+        <div class="contact_send">
+
+
+          <div class="contact_loader none">
+            <img src="assets/contact/loader.svg" alt="Enviando...">
+          </div>
 
           <input class="form_submit button" type="submit" value="Send">
 
-        </form>
 
+
+          <div class="contact_response">
+          </div>
+
+        </div>
       </article>
 
     </section>

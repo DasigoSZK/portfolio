@@ -553,10 +553,51 @@ a {
   height: 65%;
 }
 
-.form_submit {
+.contact_send {
   margin-bottom: -4rem;
+  width: 100%;
+}
+
+.form_submit {
   margin-left: auto;
   margin-right: auto;
+  display: block;
+}
+
+.contact_loader {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form_error {
+  margin-top: -0.10rem;
+  font-size: 80%;
+  text-align: center;
+  background-color: #B22222;
+  color: #fff;
+  transform: all 800ms ease;
+  height: 30px;
+  border-radius: 0 0 5px 5px;
+  padding-top: 0.5rem;
+}
+
+.form_error.is-active {
+  display: block;
+  animation: show-message 1s 1 normal 0s ease-out both;
+}
+
+@keyframes show-message {
+
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 
