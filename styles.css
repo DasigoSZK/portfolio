@@ -571,6 +571,29 @@ a {
   margin-bottom: 1rem;
 }
 
+.contact_loader.is-active {
+  display: block;
+}
+
+.contact_response {
+  background-color: rgba(0, 0, 0, 0.9);
+  margin-bottom: 1rem;
+}
+
+.contact_response h3 {
+  font-size: 1.5rem;
+  font-family: var(--font-text-special);
+  text-align: center;
+  text-shadow: 2px 0px 0px var(--color-secondPurple),
+    0px 2px 0px var(--color-secondPurple),
+    -2px 0px 0px var(--color-secondPurple),
+    0px -2px 0px var(--color-secondPurple);
+}
+
+.contact_response.is-active {
+  display: block;
+}
+
 .form_error {
   margin-top: -0.10rem;
   font-size: 80%;

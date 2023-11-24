@@ -5,6 +5,8 @@ export function contactFormValidations() {
   const $form = d.querySelector(".contact_form");
   const $inputs = d.querySelectorAll(".form_input input");
   const $textarea = d.querySelector(".form_textarea textarea");
+  const $loader = d.querySelector(".contact_loader");
+  const $response = d.querySelector(".contact_response");
 
   //Agrega un span por cada input/textarea y lo oculta
   $inputs.forEach(input => {
@@ -50,9 +52,30 @@ export function contactFormValidations() {
   //Envia el formulario del submit (esta fuera del form)
 
   d.addEventListener("click", e => {
+
     if (!e.target.matches(".form_submit")) return false;
 
     e.preventDefault();
-    $form.submit();
+
+    $loader.classList.add("is-active");
+
+    setTimeout(() => {
+      $loader.classList.remove("is-active");
+      $response.classList.add("is-active");
+      setTimeout(() => {
+        $response.classList.remove("is-active")
+      }
+        , 3000)
+    }, 3000)
+
   })
+
+  //Loaders y Respuesta de formulario
+
+  // d.addEventListener("submit", e => {
+
+  //   e.preventDefault();
+
+
+  // })
 } 
