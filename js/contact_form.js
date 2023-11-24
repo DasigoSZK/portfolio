@@ -59,23 +59,35 @@ export function contactFormValidations() {
 
     $loader.classList.add("is-active");
 
-    setTimeout(() => {
-      $loader.classList.remove("is-active");
-      $response.classList.add("is-active");
-      setTimeout(() => {
-        $response.classList.remove("is-active")
-      }
-        , 3000)
-    }, 3000)
+    fetch("https://formsubmit.co/ajax/marioyxyluigi@gmail.com", {
+      method: "POST",
+      body: new FormData($form)
+    })
+      .then(res => res.ok ? res.json() : Promise.reject(res))
+      .then(json => {
+        console.log(json)
+        $loader.classList.remove("is-active");
+        $response.innerHTML = `
+        <h3>¡Email sent!</h3>
+        <h3>👾I'll contact you soon👾</h3>
+        `;
+        $response.classList.add("is-active");
+      })
+      .catch(err => {
+        console.log(err);
+        $loader.classList.remove("is-active");
+        $response.innerHTML = `
+        <h3>🤖Ocurrió un error🤖</h3>
+        <h3>Vuelve a intentarlo mas tarde...</h3>
+        `;;
+        $response.classList.add("is-active");
+      })
+      .finally(() => {
+        setTimeout(() => {
+          $response.classList.remove("is-active");
+        }, 3000)
+        $form.reset();
+      })
 
   })
-
-  //Loaders y Respuesta de formulario
-
-  // d.addEventListener("submit", e => {
-
-  //   e.preventDefault();
-
-
-  // })
 } 
