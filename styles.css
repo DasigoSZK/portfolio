@@ -174,7 +174,7 @@ a {
   transform: translateY(0);
 }
 
-/* ---- Buttons ---- */
+/* ---- Button ---- */
 
 .button {
   background-color: var(--color-secondPurple);
@@ -186,6 +186,15 @@ a {
   border: 0;
   width: 70%;
   font-size: 150%;
+}
+
+/* ---- Card ---- */
+
+.card {
+  background-color: var(--color-thirdDarkgray);
+  border: 2px solid white;
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 5px;
 }
 
 
@@ -708,4 +717,83 @@ a {
   font-size: 1rem;
   margin-bottom: 1rem;
   font-weight: 400;
+}
+
+
+
+
+
+
+/* -------- ABOUT -------- */
+
+.about {
+  background-image: url(assets/home/background-space.png);
+  background-position: center;
+  background-repeat: repeat-y;
+  background-size: contain;
+  padding: 1rem 1rem 15rem 1rem;
+}
+
+
+/* ---- ABOUT/WORK/CONTACT Hero ---- */
+
+/* .hero {
+  height: 20vh;
+  background-size: cover;
+}
+
+.hero .pane {
+  bottom: -50%;
+} */
+
+/* ---- About INFO ---- */
+
+.about_info {
+  height: 90vh;
+  width: 100%;
+  position: relative;
+  margin-top: 12rem;
+}
+
+.info_text {
+  position: relative;
+  z-index: 800;
+}
+
+.text_title {
+  color: var(--color-firstYellow);
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.text_paragraphs {
+  font-family: var(--font-text-special);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.paragraph {
+  text-wrap: balance;
+}
+
+.paragraph--alien {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.paragraph--alien p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.info_img {
+  position: absolute;
+  width: 50%;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+  top: -10%;
+  z-index: 790;
 }

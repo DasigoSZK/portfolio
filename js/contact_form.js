@@ -65,7 +65,6 @@ export function contactFormValidations() {
 
     let validation = true;
     let errors = d.querySelectorAll(".form_error");
-    console.log(errors);
 
     errors.forEach(error => {
       if (error.classList.contains("is-active")) {
