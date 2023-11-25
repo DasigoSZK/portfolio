@@ -623,6 +623,33 @@ a {
   }
 }
 
+.form-incomplete {
+  animation: red-border 1s 1 normal 0s ease-out both;
+}
+
+@keyframes red-border {
+
+  0% {
+    border: 2px solid red;
+  }
+
+  25% {
+    border: 2px solid white;
+  }
+
+  50% {
+    border: 2px solid red;
+  }
+
+  75% {
+    border: 2px solid white;
+  }
+
+  100% {
+    border: 2px solid red;
+  }
+}
+
 
 
 

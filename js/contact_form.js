@@ -37,16 +37,20 @@ export function contactFormValidations() {
 
       let regex = new RegExp(pattern);
 
-      return !regex.exec($input.value)
-        ? d.getElementById($input.name).classList.add("is-active")
-        : d.getElementById($input.name).classList.remove("is-active");
+      if (!regex.exec($input.value)) {
+        return d.getElementById($input.name).classList.add("is-active");
+      } else if (regex.exec($input.value)) {
+        return d.getElementById($input.name).classList.remove("is-active")
+      }
+
     }
 
     if (!pattern && $input.value === "") {
-      d.getElementById($input.name).classList.add("is-active")
+      return d.getElementById($input.name).classList.add("is-active")
     } else if (!pattern && $input.value != "") {
-      d.getElementById($input.name).classList.remove("is-active");
+      return d.getElementById($input.name).classList.remove("is-active");
     }
+
   })
 
   //Envia el formulario del submit (esta fuera del form)
@@ -57,37 +61,67 @@ export function contactFormValidations() {
 
     e.preventDefault();
 
-    $loader.classList.add("is-active");
+    //Validación de Formulario
 
-    fetch("https://formsubmit.co/ajax/marioyxyluigi@gmail.com", {
-      method: "POST",
-      body: new FormData($form)
+    let validation = true;
+    let errors = d.querySelectorAll(".form_error");
+    console.log(errors);
+
+    errors.forEach(error => {
+      if (error.classList.contains("is-active")) {
+        validation = false;
+      }
     })
-      .then(res => res.ok ? res.json() : Promise.reject(res))
-      .then(json => {
-        console.log(json)
-        $loader.classList.remove("is-active");
-        $response.innerHTML = `
+
+    //Envia formulario / Inicia animación de error
+    if (validation == true) {
+
+      $loader.classList.add("is-active");
+
+      fetch("https://formsubmit.co/ajax/marioyxyluigi@gmail.com", {
+        method: "POST",
+        body: new FormData($form)
+      })
+        .then(res => res.ok ? res.json() : Promise.reject(res))
+        .then(json => {
+          console.log(json)
+          $loader.classList.remove("is-active");
+          $response.innerHTML = `
         <h3>¡Email sent!</h3>
         <h3>👾I'll contact you soon👾</h3>
         `;
-        $response.classList.add("is-active");
-      })
-      .catch(err => {
-        console.log(err);
-        $loader.classList.remove("is-active");
-        $response.innerHTML = `
+          $response.classList.add("is-active");
+        })
+        .catch(err => {
+          console.log(err);
+          $loader.classList.remove("is-active");
+          $response.innerHTML = `
         <h3>🤖Ocurrió un error🤖</h3>
         <h3>Vuelve a intentarlo mas tarde...</h3>
         `;;
-        $response.classList.add("is-active");
-      })
-      .finally(() => {
+          $response.classList.add("is-active");
+        })
+        .finally(() => {
+          setTimeout(() => {
+            $response.classList.remove("is-active");
+          }, 3000)
+          $form.reset();
+        })
+
+    } else {
+
+      //Inicia animación de bordes rojos
+      errors.forEach(error => {
+        let $invalidInput = error.previousElementSibling;
+        $invalidInput.classList.add("form-incomplete");
         setTimeout(() => {
-          $response.classList.remove("is-active");
-        }, 3000)
-        $form.reset();
+          $invalidInput.classList.remove("form-incomplete");
+        }, 1000)
       })
+
+    }
+
+
 
   })
 } 
