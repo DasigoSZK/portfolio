@@ -137,13 +137,19 @@ a {
   transition: transform 0.3s ease-in-out;
 }
 
+.menu-desktop {
+  display: none;
+}
+
 .menu {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  width: 100%;
+  align-items: end;
+  width: 80%;
   height: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .menu a {
@@ -151,18 +157,17 @@ a {
   font-size: 2rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  max-width: 170px;
 }
 
 .menu a img {
-  margin-bottom: -3%;
-  margin-right: 0.25rem;
+  margin-bottom: -6%;
+  margin-left: 0.25rem;
 }
 
 .menu hr {
   color: var(--text-black);
   background-color: #000;
-  width: 80%;
+  width: 100%;
   border: 1px solid black;
   margin-top: 5%;
   margin-bottom: 0;
@@ -266,7 +271,8 @@ a {
 /*  ---- Home-Hero ----  */
 
 .hero {
-  background-image: url(./assets/hero/heroBackground.gif);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url(./assets/hero/heroBackground.gif);
   background-position: bottom center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -635,10 +641,11 @@ a {
   text-align: center;
   background-color: #B22222;
   color: #fff;
-  transform: all 800ms ease;
-  height: 30px;
+  transition: all 300ms ease;
+  height: 50px;
   border-radius: 0 0 5px 5px;
   padding-top: 0.5rem;
+  width: 100%;
 }
 
 .form_error.is-active {
@@ -1043,6 +1050,47 @@ a {
 @media only screen and (min-width:1024px) {
 
   /* -------- Header (Nav) -------- */
+
+  header {
+    background-color: var(--color-firstYellow);
+  }
+
+  .nav_bar {
+    position: sticky;
+    top: 0;
+    height: 5rem;
+    display: flex;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .panel {
+    display: none;
+  }
+
+  .panel-btn {
+    display: none;
+  }
+
+  .menu-desktop {
+    display: flex;
+    justify-content: end;
+    gap: 1.25rem;
+
+  }
+
+  .menu-desktop_link {
+    display: flex;
+    align-items: center;
+    color: #000;
+    font-weight: bold;
+  }
+
+  .menu-desktop_link img {
+    width: 35px;
+    margin-left: 0.25rem;
+  }
 
 
   /* -------- Home -------- */
