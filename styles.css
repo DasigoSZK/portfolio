@@ -1092,6 +1092,11 @@ a {
     margin-left: 0.25rem;
   }
 
+  .menu-desktop_link:hover p,
+  .menu-desktop_link:hover img {
+    opacity: 75%;
+  }
+
 
   /* -------- Home -------- */
 
