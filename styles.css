@@ -737,14 +737,14 @@ a {
 
 /* ---- ABOUT/WORK/CONTACT Hero ---- */
 
-.hero {
+/*.hero {
   height: 20vh;
   background-size: cover;
 }
 
 .hero .pane {
   bottom: -50%;
-}
+}*/
 
 /* ---- About INFO ---- */
 
@@ -913,4 +913,97 @@ a {
 .cv_svg {
   width: 50px;
   margin-bottom: -10px;
+}
+
+
+/* -------- WORK -------- */
+
+.work {
+  background-image: url(assets/home/background-space.png);
+  background-position: center;
+  background-repeat: repeat-y;
+  background-size: contain;
+  padding: 10rem 1rem 5rem 1rem;
+}
+
+.workcard {
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 2rem;
+  background-color: var(--color-thirdDarkgray);
+  margin-bottom: 5rem;
+}
+
+.workcard_title {
+  text-align: center;
+  color: var(--color-firstYellow);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.workcard_img {
+  aspect-ratio: 16/9;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.technologies_title {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.technologies_container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(80px, 150px));
+  gap: 10px;
+}
+
+.tech {
+  background-color: var(--color-technologies1);
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  padding: 0.3rem;
+  font-size: 110%;
+}
+
+.tech--2 {
+  background-color: var(--color-technologies2);
+}
+
+.tech--3 {
+  background-color: var(--color-technologies3);
+}
+
+.tech--4 {
+  background-color: var(--color-technologies4);
+}
+
+.tech--5 {
+  background-color: var(--color-technologies5);
+}
+
+.tech--6 {
+  background-color: var(--color-technologies6);
+}
+
+.workcard_button {
+  display: block;
+  background-color: var(--color-secondPurple);
+  border: 2px solid var(--color-secondPurple);
+  padding: 1rem;
+  border-radius: 5px;
+  margin-top: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  font-size: 150%;
+  max-width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.workcard_button:active {
+  background-color: var(--color-thirdDarkgray);
+  color: var(--color-secondPurple);
 }
