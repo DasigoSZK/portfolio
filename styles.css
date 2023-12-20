@@ -386,6 +386,7 @@ a {
 .home_projects {
   height: calc(100vh - var(--nav-size));
   width: 100%;
+  max-width: 800px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -394,19 +395,26 @@ a {
 
 .projects_folders {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-template-columns: repeat(2, minmax(120px, 1fr));
+  align-content: center;
   gap: 10%;
   width: 100%;
   justify-items: center;
   height: 25%;
   margin-bottom: 1rem;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .folder {
   max-width: 120px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .folder img {
@@ -419,33 +427,47 @@ a {
   text-align: center;
   background-color: var(--color-secondPurple);
   margin-top: 0.25rem;
-  width: 130%;
+  width: 100%;
 }
 
 .projects_preview {
   background-color: var(--color-thirdDarkgray);
   border-radius: 5px;
-  padding: 1rem;
+  padding: 2rem;
   border: 2px solid white;
   margin-top: 1rem;
+}
+
+.projects_preview img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 .projects_preview p {
   font-family: var(--font-text-special);
   line-height: 120%;
   font-size: 110%;
+  max-width: 420px;
 }
 
 .home_projects button {
   margin-top: 1rem;
+  max-width: 400px;
+}
+
+.folder:nth-child(5),
+.folder:nth-child(6) {
+  display: none;
 }
 
 /*  ---- Home-Slider ----  */
 
 .home_slider {
   width: 100%;
+  max-width: 800px;
   height: 200px;
-  margin: 0 auto;
+  margin: 6rem auto;
   background-color: var(--color-thirdDarkgray);
   border: 2px solid white;
   border-radius: 5px;
@@ -523,6 +545,7 @@ a {
 
 .home_contact {
   width: 100%;
+  max-width: 800px;
   padding: 1rem 1rem 2rem 1rem;
   background-color: var(--color-thirdDarkgray);
   border: 2px solid white;
@@ -551,6 +574,8 @@ a {
   justify-content: center;
   height: 100%;
   margin-top: 1.5rem;
+  width: 100%;
+  max-width: 800px;
 }
 
 .form_input {
@@ -562,6 +587,7 @@ a {
 
 .form_textarea {
   height: 55%;
+  width: 100%;
 }
 
 .form_input label,
@@ -598,6 +624,7 @@ a {
 .contact_send {
   margin-bottom: -4rem;
   width: 100%;
+  max-width: 600px;
 }
 
 .form_submit {
@@ -714,6 +741,8 @@ a {
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   justify-content: space-evenly;
   justify-items: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer_links a {
@@ -1097,10 +1126,27 @@ a {
     opacity: 75%;
   }
 
+  /* -------- Footer -------- */
+
+  .footer {
+    padding: 1rem;
+  }
+
+  .footer_logo {
+    display: block;
+    width: 72px;
+    align-self: center;
+  }
+
+
 
   /* -------- Home -------- */
 
   /* ---- Home-Hero ---- */
+
+  .hero {
+    height: 90vh;
+  }
 
   .hero_img {
     margin-right: unset;
@@ -1135,5 +1181,16 @@ a {
     background-color: rgba(0, 0, 0, 0.0);
     border: 2px solid var(--color-firstYellow);
     color: var(--color-firstYellow);
+  }
+
+  /* ---- Home-Projects ---- */
+
+  .projects_folders {
+    grid-template-columns: repeat(3, minmax(120px, 1fr));
+  }
+
+  .folder:nth-child(5),
+  .folder:nth-child(6) {
+    display: flex;
   }
 }
