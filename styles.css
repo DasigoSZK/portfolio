@@ -271,7 +271,7 @@ a {
 /*  ---- Home-Hero ----  */
 
 .hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
     url(./assets/hero/heroBackground.gif);
   background-position: bottom center;
   background-size: cover;
@@ -800,20 +800,23 @@ a {
 
 /* ---- ABOUT/WORK/CONTACT Hero ---- */
 
-/*.hero {
+.hero--short {
   height: 20vh;
   background-size: cover;
 }
 
-.hero .pane {
+.hero--short .pane {
   bottom: -50%;
-}*/
+}
 
 /* ---- About INFO ---- */
 
 .about_info {
   height: 70vh;
   width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
   margin-bottom: 5rem;
 }
@@ -837,7 +840,9 @@ a {
 }
 
 .paragraph {
-  text-wrap: balance;
+  text-wrap: wrap;
+  width: fit-content;
+  max-width: 500px;
 }
 
 .paragraph--alien {
@@ -854,10 +859,11 @@ a {
 .info_img {
   position: absolute;
   width: 50%;
+  max-width: 200px;
   left: 50%;
   right: 50%;
   transform: translateX(-50%);
-  top: -13%;
+  top: -9vh;
   z-index: 790;
 }
 
@@ -867,6 +873,9 @@ a {
 .about_skills {
   height: 70vh;
   width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
   z-index: 800;
 }
@@ -914,6 +923,7 @@ a {
 .skills_img {
   position: absolute;
   width: 50%;
+  max-width: 200px;
   left: 50%;
   right: 50%;
   transform: translateX(-50%);
@@ -1138,8 +1148,6 @@ a {
     align-self: center;
   }
 
-
-
   /* -------- Home -------- */
 
   /* ---- Home-Hero ---- */
@@ -1183,6 +1191,25 @@ a {
     color: var(--color-firstYellow);
   }
 
+  /* ---- Hero(short-version) ---- */
+
+  .hero--short {
+    height: 20vh;
+  }
+
+  .hero--short .pane {
+    align-items: center;
+  }
+
+  .hero--short .pane_text h3,
+  .hero--short .pane_text h1 {
+    text-align: center;
+  }
+
+  .hero--short .pane {
+    max-width: 800px;
+  }
+
   /* ---- Home-Projects ---- */
 
   .projects_folders {
@@ -1193,4 +1220,13 @@ a {
   .folder:nth-child(6) {
     display: flex;
   }
+
+
+
+
+  /* -------- About -------- */
+
+  /* ---- About INFO ---- */
+
+
 }
