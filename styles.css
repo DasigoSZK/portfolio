@@ -940,7 +940,7 @@ a {
   background-position: center;
   background-repeat: repeat-y;
   background-size: contain;
-  padding: 10rem 1rem 10rem 1rem;
+  padding: 12rem 1rem 10rem 1rem;
 }
 
 /* ---- Contact-Form ---- */
@@ -963,9 +963,17 @@ a {
 .home_contact--contact {
   position: relative;
   z-index: 940;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ---- Contact-CV ---- */
+
+.contact_cv {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .cv_links {
   display: flex;
@@ -986,6 +994,11 @@ a {
 .cv_svg {
   width: 50px;
   margin-bottom: -10px;
+}
+
+.contact_send {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -1201,13 +1214,8 @@ a {
     align-items: center;
   }
 
-  .hero--short .pane_text h3,
-  .hero--short .pane_text h1 {
-    text-align: center;
-  }
-
   .hero--short .pane {
-    max-width: 800px;
+    max-width: 700px;
   }
 
   /* ---- Home-Projects ---- */
