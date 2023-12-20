@@ -1018,6 +1018,9 @@ a {
   padding: 2rem;
   background-color: var(--color-thirdDarkgray);
   margin-bottom: 5rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .workcard_title {
@@ -1030,6 +1033,10 @@ a {
 .workcard_img {
   aspect-ratio: 16/9;
   width: 100%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
   object-fit: cover;
   object-position: top;
 }
@@ -1043,6 +1050,7 @@ a {
   display: grid;
   grid-template-columns: repeat(3, minmax(80px, 150px));
   gap: 10px;
+  justify-content: space-evenly;
 }
 
 .tech {
@@ -1084,7 +1092,8 @@ a {
   font-weight: bold;
   text-align: center;
   font-size: 150%;
-  max-width: 75%;
+  width: 75%;
+  max-width: 300px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1232,9 +1241,61 @@ a {
 
 
 
-  /* -------- About -------- */
+  /* -------- Work -------- */
 
-  /* ---- About INFO ---- */
+  .workcard {
+    display: grid;
+    grid-template-areas:
+      "img img img img title title title title title"
+      "img img img img text  text  text  text  text"
+      "img img img img text  text  text  text  text"
+      "btn btn btn btn tech  tech  tech  tech  tech"
+    ;
+  }
+
+  .workcard--reverse {
+    display: grid;
+    grid-template-areas:
+      "title title title title title img img img img"
+      "text  text  text  text  text  img img img img"
+      "text  text  text  text  text  img img img img"
+      "tech  tech  tech  tech  tech  btn btn btn btn"
+    ;
+  }
+
+  .workcard_title {
+    grid-area: title;
+    margin-top: -1rem;
+  }
+
+  .workcard_img {
+    grid-area: img;
+    margin-top: 1rem;
+    max-width: 500px;
+  }
+
+  .workcard_text {
+    grid-area: text;
+    max-width: 400px;
+    font-size: 130%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .workcard_technologies {
+    grid-area: tech;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .workcard_button {
+    grid-area: btn;
+
+  }
+
+
+
 
 
 }
