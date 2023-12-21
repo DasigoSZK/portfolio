@@ -463,6 +463,13 @@ a {
   display: none;
 }
 
+.projects_button {
+  text-align: center;
+  display: block;
+  margin-top: 2rem;
+  max-width: 400px;
+}
+
 /*  ---- Home-Slider ----  */
 
 .home_slider {
