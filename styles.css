@@ -191,6 +191,7 @@ a {
   border: 0;
   width: 70%;
   font-size: 150%;
+  cursor: pointer;
 }
 
 .button:active {
