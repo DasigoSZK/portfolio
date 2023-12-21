@@ -63,6 +63,7 @@ export function contactFormValidations() {
 
     //Validación de Formulario
 
+    //Valida si tienen mensaje de error activo
     let validation = true;
     let errors = d.querySelectorAll(".form_error");
 
@@ -71,6 +72,11 @@ export function contactFormValidations() {
         validation = false;
       }
     })
+
+    //Valida si el formulario esta vacío
+    if ($inputs.value === "" || $textarea.value === "") {
+      validation = false;
+    }
 
     //Envia formulario / Inicia animación de error
     if (validation == true) {
