@@ -298,6 +298,7 @@ a {
   margin-right: auto;
   position: relative;
   z-index: 900;
+  cursor: pointer;
 }
 
 .hero .pane {
