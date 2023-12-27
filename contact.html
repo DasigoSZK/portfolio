@@ -17,7 +17,7 @@
 
 <body>
 
-  <!-- Menu Nav -->
+  <!-- Menu-Nav -->
   <header>
 
     <div class="nav_bar">
@@ -52,23 +52,24 @@
 
     <nav class="panel">
       <div class="menu">
-        <a href="#contact">Contact<img width="45px" src="./assets/header/icon-mail.png" alt="message icon"></a>
-        <a href="#about">About<img width="55px" src="./assets/header/icon-person.png" alt="person/human icon"></a>
-        <a href="#work">Work<img width="55px" src="./assets/header/icon-work.png" alt="portfolio/work icon"></a>
+        <a href="#contact"><img width="45px" src="./assets/header/icon-mail.png" alt="message icon">Contact</a>
+        <a href="#about"><img width="55px" src="./assets/header/icon-person.png" alt="person/human icon">About</a>
+        <a href="#work"><img width="55px" src="./assets/header/icon-work.png" alt="portfolio/work icon">Work</a>
         <hr>
       </div>
     </nav>
 
   </header>
 
-  <!-- Hero -->
+
 
   <main>
 
-    <div class="hero">
+    <!-- Hero -->
+    <div class="hero hero--short">
 
       <div class="hero_content">
-        <img class="hero_img" src="./assets/hero/dasigoanime.png" alt="anime style photo of Dasigo Szkamarda developer">
+        <img class="none" src="./assets/hero/dasigoanime.png" alt="anime style photo of Dasigo Szkamarda developer">
 
         <div class="pane">
           <div class="pane_text">
@@ -77,8 +78,8 @@
             <h3>Software Developer</h3>
           </div>
           <div class="pane_buttons">
-            <button class="hero-btn">Get in Touch</button>
-            <button class="hero-btn">Work</button>
+            <button>Get in Touch</button>
+            <button>Work</button>
           </div>
 
         </div>
@@ -86,89 +87,20 @@
 
     </div>
 
-    <!-- Content -->
-    <section class="home">
+    <section class="contact">
 
-      <div class="container">
 
-        <!-- Projects -->
-        <article class="home_projects">
-          <div class="projects_folders">
-            <div data-id="1" class="folder">
-              <img src="assets/home/folder-icon2.png" alt="8-bit yellow folder icon">
-              <h4>project-1</h4>
-            </div>
-            <div data-id="2" class="folder">
-              <img src="assets/home/folder-icon2.png" alt="8-bit yellow folder icon">
-              <h4>project-2</h4>
-            </div>
-            <div data-id="3" class="folder">
-              <img src="assets/home/folder-icon2.png" alt="8-bit yellow folder icon">
-              <h4>project-3</h4>
-            </div>
-            <div data-id="4" class="folder">
-              <img src="assets/home/folder-icon2.png" alt="8-bit yellow folder icon">
-              <h4>project-4</h4>
-            </div>
-            <div data-id="5" class="folder">
-              <img src="assets/home/folder-icon2.png" alt="8-bit yellow folder icon">
-              <h4>project-5</h4>
-            </div>
-            <div data-id="6" class="folder">
-              <img src="assets/home/folder-icon2.png" alt="8-bit yellow folder icon">
-              <h4>project-6</h4>
-            </div>
-          </div>
-          <div class="projects_preview">
-            <img src="assets/home/project-1.jpg" alt="SalónDeBellezaM&G (project-1) website preview">
-            <p class="preview_text">First project, "Salón de Belleza M&G" is a simple website in which i aimed to
-              reinforce the basic web
-              development concepts.<br>For the project, i used: HTML, CSS, SASS, and BOOTSTRAP.</p>
-          </div>
-          <a class="button projects_button">Go to Website</a>
-        </article>
 
-        <!-- Slider -->
-        <article class="home_slider">
-          <div class="slider_container">
-            <div class="slide">
-              <img class="slide_img" src="/assets/home/avatar-1.png" alt="8-bit/pixelart style avatar 1">
-              <h4 class="slide_title">Fake First Name</h4>
-              <p class="slide_text">"Dasigo is a great teammate. He is always very patient and understanding, which
-                makes
-                him easy to work with."</p>
-            </div>
-            <div class="slide">
-              <img class="slide_img" src="/assets/home/avatar-2.png" alt="8-bit/pixelart style avatar 2">
-              <h4 class="slide_title">Fake Second Name</h4>
-              <p class="slide_text">"Dasigo was an exceptional student. Their dedication, quick learning, and passiong
-                for
-                the subject made him stand out."</p>
-            </div>
-            <div class="slide">
-              <img class="slide_img" src="/assets/home/avatar-3.png" alt="8-bit/pixelart style avatar 3">
-              <h4 class="slide_title">Fake Third Name</h4>
-              <p class="slide_text">"Dasigo is an extremely enthusiastic web developer who is always seeking new ways to
-                enhance his skills and teach them
-                to others."</p>
-            </div>
-          </div>
-          <div class="slider_pointers">
-            <ul>
-              <li class="pointer--active"></li>
-              <li></li>
-              <li></li>
-            </ul>
-          </div>
-        </article>
+      <!-- ContactForm -->
+      <div class="relative_antenna">
+        <img src="./assets/contact/antenna.png" alt="cartoon antenna" class="contact_antenna">
+        <article class="home_contact home_contact--contact">
+          <h3 class="contact_title contact_title--contact">Contact</h3>
 
-        <!-- ContactForm -->
-        <article class="home_contact">
-          <h3 class="contact_title">Contact</h3>
           <form class="contact_form">
 
-            <div class="form_background">
 
+            <div class="form_background relative">
 
               <!-- Name -->
               <div class="form_input">
@@ -205,6 +137,7 @@
 
 
             </div>
+
           </form>
 
           <!-- Contact Submit -->
@@ -222,13 +155,26 @@
 
           </div>
         </article>
-
       </div>
 
-    </section>
-  </main>
+      <!-- CV -->
+      <article class="contact_cv card">
+        <div class="cv_links">
+          <a class="cv_link" href="#drive">
+            <img src="./assets/contact/cv-download.svg" alt="minimalistic download icon" class="cv_svg">
+            EN-CV</a>
+          <a class="cv_link" href="#drive">
+            <img src="./assets/contact/cv-download.svg" alt="minimalistic download icon" class="cv_svg">
+            ES-CV</a>
+        </div>
+        <img src="./assets/contact/dummy-cv.jpg" alt="Dasigo Szkamarda CV preview">
+      </article>
 
-  <!-- Footer -->
+
+    </section>
+
+
+  </main>
 
   <footer class="footer">
 
@@ -239,17 +185,17 @@
         <h3 class="links_title">-Social Media</h3>
         <div class="link">
           <img class="links_logo" src="assets/footer/footer-githublogo.svg" alt="GitHub svg logo">
-          <a target="_blank" href="https://github.com/DasigoSZK">GitHub</a>
+          <a href="#">GitHub</a>
         </div>
 
         <div class="link">
           <img class="links_logo" src="assets/footer/footer-linkedinlogo.svg" alt="LinkedIn svg logo">
-          <a target="_blank" href="#">LinkedIn</a>
+          <a href="#">LinkedIn</a>
         </div>
 
         <div class="link">
           <img class="links_logo" src="assets/footer/footer-instagramlogo.svg" alt="Instagram svg logo">
-          <a target="_blank" href="https://www.instagram.com/dasigoszka/">Instagram</a>
+          <a href="#">Instagram</a>
         </div>
 
       </article>
@@ -280,7 +226,8 @@
 
   </footer>
 
-  <script src="./js/index.js" type="module"></script>
+  <script src="./js/contact.js" type="module"></script>
+
 </body>
 
 </html>
