@@ -279,11 +279,11 @@ export function Home() {
         //Colorea el título y luego la imagen
         e.target.style.color = "#896aaa";
         let $img = e.target.previousElementSibling;
-        $img.src = "./assets/home/folder-icon2-selected.png";
+        $img.src = "./app/assets/home/folder-icon2-selected.png";
 
         //Obtiene la imagen del proyecto con data-id
         let projectID = `project-${e.target.parentElement.dataset.id}.jpg`;
-        $projectPreview.src = `./assets/home/${projectID}`;
+        $projectPreview.src = `./app/assets/home/${projectID}`;
 
         //Cambia texto del proyecto con data-id
         let project = e.target.parentElement.dataset.id;

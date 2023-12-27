@@ -37,7 +37,7 @@ export function Hero() {
 
       let deviceWidth = window.innerWidth;
       let btnSound = new Audio('./app/assets/sounds/btnSelect.wav');
-      btnSound.volume = 0.5;
+      btnSound.volume = 0.3;
 
       if (deviceWidth > 1024) {
         btnSound.play();
