@@ -4,7 +4,7 @@ export function alienEffect(human, background) {
 
   let $humanIMG = d.querySelector(human);
   let $backgroundIMG = d.querySelector(background);
-  let alienSound = new Audio("../assets/sounds/alienSound.wav");
+  let alienSound = new Audio("./assets/sounds/alienSound.wav");
   alienSound.volume = 0.5;
   let imgToggler = 0;
 

@@ -8,7 +8,7 @@ export function btnSound(btn) {
     if (!e.target.matches(btn)) return;
 
     let deviceWidth = window.innerWidth;
-    let btnSound = new Audio('../assets/sounds/btnSelect.wav');
+    let btnSound = new Audio('./assets/sounds/btnSelect.wav');
     btnSound.volume = 0.5;
 
     if (deviceWidth > 1024) {

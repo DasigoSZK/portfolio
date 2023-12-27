@@ -12,7 +12,7 @@ export function switchProject() {
 
     //Sonido solo en escritorio
     if (window.innerWidth > 1024) {
-      let openSound = new Audio("../assets/sounds/openFolder.flac");
+      let openSound = new Audio("./assets/sounds/openFolder.flac");
       openSound.volume = 0.5;
       openSound.play();
     }
@@ -20,7 +20,7 @@ export function switchProject() {
 
     //Reseteamos todos los projectos
     $folders.forEach(folder => {
-      folder.src = "assets/home/folder-icon2.png";
+      folder.src = "./assets/home/folder-icon2.png";
     })
     $titles.forEach(title => {
       title.style.color = "#fff";
@@ -31,13 +31,13 @@ export function switchProject() {
     //Si clickea en la imagen
     if (e.target.matches("img")) {
       //Colorea la imagen y luego el título
-      e.target.src = "assets/home/folder-icon2-selected.png";
+      e.target.src = "./assets/home/folder-icon2-selected.png";
       let $h4 = e.target.nextElementSibling;
       $h4.style.color = "#896aaa";
 
       //Obtiene la imagen del proyecto con data-id
       let projectID = `project-${e.target.parentElement.dataset.id}.jpg`;
-      $projectPreview.src = `assets/home/${projectID}`;
+      $projectPreview.src = `./assets/home/${projectID}`;
 
       //Cambia texto del proyecto con data-id
       let project = e.target.parentElement.dataset.id;
@@ -81,11 +81,11 @@ export function switchProject() {
       //Colorea el título y luego la imagen
       e.target.style.color = "#896aaa";
       let $img = e.target.previousElementSibling;
-      $img.src = "assets/home/folder-icon2-selected.png";
+      $img.src = "./assets/home/folder-icon2-selected.png";
 
       //Obtiene la imagen del proyecto con data-id
       let projectID = `project-${e.target.parentElement.dataset.id}.jpg`;
-      $projectPreview.src = `assets/home/${projectID}`;
+      $projectPreview.src = `./assets/home/${projectID}`;
 
       //Cambia texto del proyecto con data-id
       let project = e.target.parentElement.dataset.id;
