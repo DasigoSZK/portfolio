@@ -1,3 +1,5 @@
+let called = false;
+
 export function Header() {
 
   const d = document;
@@ -68,9 +70,13 @@ export function Header() {
   }
 
   //Esperamos a que se cargue el DOM para llamar a las funciones
-  setTimeout(() => {
-    hamburgerMenu(".panel-btn", ".panel", ".menu");
-  }, 100);
+  if (!called) {
+    called = true;
+    console.log("Funcion menu: " + called)
+    setTimeout(() => {
+      hamburgerMenu(".panel-btn", ".panel", ".menu");
+    }, 100);
+  }
 
   //Retornamos el nodo HEADER
   return $header;
