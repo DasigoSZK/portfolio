@@ -349,7 +349,7 @@ a {
   max-width: 500px;
 }
 
-.pane_buttons button {
+.hero-btn {
   width: 40%;
   max-width: 170px;
   height: 35px;
@@ -357,27 +357,31 @@ a {
   font-size: 120%;
   border-radius: 5px;
   cursor: pointer;
+  text-align: center;
+  line-height: 160%;
 }
 
-.pane_buttons button:first-of-type {
+.hero-btn:first-of-type {
   background-color: rgba(0, 0, 0, 0.0);
   border: 2px solid var(--color-firstYellow);
   color: var(--color-firstYellow);
 }
 
-.pane_buttons button:first-of-type:active {
+.hero-btn:first-of-type:active,
+.hero-btn:first-of-type:hover {
   background-color: var(--color-firstYellow);
   border: 2px solid var(--color-firstYellow);
   color: var(--text-black);
 }
 
-.pane_buttons button:last-of-type {
+.hero-btn:last-of-type {
   background-color: var(--color-firstYellow);
   border: 2px solid var(--color-firstYellow);
   color: var(--text-black);
 }
 
-.pane_buttons button:last-of-type:active {
+.hero-btn:last-of-type:active,
+.hero-btn:last-of-type:hover {
   background-color: rgba(0, 0, 0, 0.0);
   border: 2px solid var(--color-firstYellow);
   color: var(--color-firstYellow);

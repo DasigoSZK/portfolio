@@ -15,8 +15,8 @@ export function Hero() {
             <h3>Software Developer</h3>
           </div>
           <div class="pane_buttons">
-            <button class="hero-btn">Get in Touch</button>
-            <button class="hero-btn">Work</button>
+            <a href="#contact" class="hero-btn">Get in Touch</a>
+            <a href="#work" class="hero-btn">Work</a>
           </div>
 
         </div>
